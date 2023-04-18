@@ -13,26 +13,17 @@ package com.example.opt2new;
 //    }
 public class Doel {
     String naam;
-    double doel;
+    double percentage;
 
-    public Doel(String naam, double doel) {
+    public Doel(String naam, double percentage) {
         this.naam = naam;
-        this.doel = doel;
+        this.percentage = percentage;
     }
-
     public String getNaam() {
         return naam;
     }
-
-    public void setNaam(String naam) {
-        this.naam = naam;
-    }
-
     public double getDoel() {
-        return doel;
+        return percentage;
     }
 
-    public void setDoel(double doel) {
-        this.doel = doel;
-    }
 }
