@@ -3,13 +3,13 @@ package com.example.opt2new;
 public class Client {
     private String naam;
     private String geslacht;
-    private int gewicht;
+    private double gewicht;
     private int lengte;
     private int leeftijd;
     private int calorieBehoefte;
 
 
-    public Client(String naam, String geslacht, int gewicht, int lengte, int leeftijd) {
+    public Client(String naam, String geslacht, double gewicht, int lengte, int leeftijd) {
         this.naam = naam;
         this.geslacht = geslacht;
         this.gewicht = gewicht;
@@ -17,29 +17,16 @@ public class Client {
         this.leeftijd = leeftijd;
         this.calorieBehoefte = berekenCaloriebehoefte();
     }
-
-    public String getGeslacht() {
-        return geslacht;
-    }
-
-    public int getGewicht() {
+    public double getGewicht() {
         return gewicht;
     }
-
-    public int getLengte() {
-        return lengte;
-    }
-
-    public int getLeeftijd() {
-        return leeftijd;
-    }
-
     public String getNaam() {
         return naam;
     }
 
-    public void setGewicht(int gewicht) {
+    public void setGewicht(double gewicht) {
         this.gewicht = gewicht;
+        this.calorieBehoefte = berekenCaloriebehoefte();
     }
 
     public int getCalorieBehoefte() {

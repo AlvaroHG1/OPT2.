@@ -14,4 +14,14 @@ public class Gerecht {
         this.dieet = dieet;
         this.calorie = calorie;
     }
+    public void addIngredient(Ingredient ingredient) {
+        ingredientenGerecht.add(ingredient);
+    }
+    public String getNaam() {
+        return naam;
+    }
+
+    public ArrayList<Ingredient> getIngredienten() {
+        return ingredientenGerecht;
+    }
 }
