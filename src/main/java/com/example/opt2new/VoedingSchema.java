@@ -3,7 +3,7 @@ package com.example.opt2new;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class HelloApplication {
+public class VoedingSchema {
     public ArrayList<Doel> doelen = new ArrayList<>();
     public ArrayList<Client> clients = new ArrayList<>();
     public ArrayList<Dieet> dieet = new ArrayList<>();
@@ -12,7 +12,7 @@ public class HelloApplication {
     ArrayList<Ingredient> gerechten = new ArrayList<>();
 
     public static void main(String[] args) {
-        HelloApplication start = new HelloApplication();
+        VoedingSchema start = new VoedingSchema();
         start.start();
     }
 
@@ -22,7 +22,7 @@ public class HelloApplication {
         doelen.add(new Doel("Lean bulk", 1.10));
 
         clients.add(new Client("Alvaro", "m", 78, 188, 23));
-        clients.add(new Client("Quimey", "m", 88, 190, 22));
+        clients.add(new Client("Sanne", "v", 50, 165, 30));
 
         Dieet vegan = new Vegan("Vegan");
         Dieet vegetarisch = new Vegetarisch("Vergetarisch");
@@ -31,7 +31,7 @@ public class HelloApplication {
         dieet.add(vegetarisch);
         dieet.add(vlees);
 
-        Gerecht QuinoaSalade = new Gerecht("QuinoaSalade", vegan, 500);
+        GerechtT QuinoaSalade = new GerechtT("QuinoaSalade", vegan, 500);
         Ingredient avocado = new Ingredient("Avocado");
         Ingredient quinoa = new Ingredient("Quinoa");
         Ingredient tomaat = new Ingredient("Tomaat");
@@ -40,7 +40,7 @@ public class HelloApplication {
         QuinoaSalade.addIngredient(tomaat);
         vegan.addGerecht(QuinoaSalade);
 
-        Gerecht VeganCurry = new Gerecht("Vegan Curry", vegan, 700);
+        GerechtT VeganCurry = new GerechtT("Vegan Curry", vegan, 700);
         Ingredient zoeteAardappel = new Ingredient("Zoete aardappel");
         Ingredient broccoli = new Ingredient("Broccoli");
         Ingredient kikkererwten = new Ingredient("Kikkererwten");
@@ -53,7 +53,7 @@ public class HelloApplication {
         VeganCurry.addIngredient(curryKruiden);
         vegan.addGerecht(VeganCurry);
 
-        Gerecht VeganChili = new Gerecht("Vegan Chili", vegan, 600);
+        GerechtT VeganChili = new GerechtT("Vegan Chili", vegan, 600);
         Ingredient kidneyBonens = new Ingredient("Kidneybonen");
         Ingredient mais = new Ingredient("Mais");
         Ingredient paprika = new Ingredient("Paprika");
@@ -66,7 +66,7 @@ public class HelloApplication {
         VeganChili.addIngredient(chiliPoeder);
         vegan.addGerecht(VeganChili);
 
-        Gerecht VeganSushi = new Gerecht("Vegan Sushi", vegan, 300);
+        GerechtT VeganSushi = new GerechtT("Vegan Sushi", vegan, 300);
         Ingredient sushirijst = new Ingredient("Sushirijst");
         Ingredient nori = new Ingredient("Nori");
         Ingredient avocado2 = new Ingredient("Avocado");
@@ -81,7 +81,7 @@ public class HelloApplication {
         VeganSushi.addIngredient(sojasaus);
         vegan.addGerecht(VeganSushi);
 
-        Gerecht VeganBurrito = new Gerecht("Vegan Burrito", vegan, 500);
+        GerechtT VeganBurrito = new GerechtT("Vegan Burrito", vegan, 500);
         Ingredient rijst = new Ingredient("Rijst");
         Ingredient bonen = new Ingredient("Bonen");
         Ingredient tomatensalsa = new Ingredient("Tomatensalsa");
@@ -96,7 +96,7 @@ public class HelloApplication {
         VeganBurrito.addIngredient(tortilla);
         vegan.addGerecht(VeganBurrito);
 
-        Gerecht SpaghettiBolognese = new Gerecht("Spaghetti Bolognese", vlees, 600);
+        GerechtT SpaghettiBolognese = new GerechtT("Spaghetti Bolognese", vlees, 600);
         Ingredient spaghetti = new Ingredient("Spaghetti");
         Ingredient gehakt = new Ingredient("Gehakt");
         Ingredient tomatensaus = new Ingredient("Tomatensaus");
@@ -110,7 +110,7 @@ public class HelloApplication {
         SpaghettiBolognese.addIngredient(wortel);
         vlees.addGerecht(SpaghettiBolognese);
 
-        Gerecht Kippensoep = new Gerecht("Kippensoep", vlees, 800);
+        GerechtT Kippensoep = new GerechtT("Kippensoep", vlees, 800);
         Ingredient kippenbouillon = new Ingredient("Kippenbouillon");
         Ingredient kipfilet = new Ingredient("Kipfilet");
         Ingredient wortel2 = new Ingredient("Wortel");
@@ -125,7 +125,7 @@ public class HelloApplication {
         Kippensoep.addIngredient(noedels);
         vlees.addGerecht(Kippensoep);
 
-        Gerecht Hamburger = new Gerecht("Hamburger", vlees, 400);
+        GerechtT Hamburger = new GerechtT("Hamburger", vlees, 400);
         Ingredient rundergehakt = new Ingredient("Rundergehakt");
         Ingredient hamburgerbroodje = new Ingredient("Hamburgerbroodje");
         Ingredient sla = new Ingredient("Sla");
@@ -140,7 +140,7 @@ public class HelloApplication {
         Hamburger.addIngredient(cheddarkaas);
         vlees.addGerecht(Hamburger);
 
-        Gerecht BiefstukMetGroenten = new Gerecht("Biefstuk met groenten", vlees, 600);
+        GerechtT BiefstukMetGroenten = new GerechtT("Biefstuk met groenten", vlees, 600);
         Ingredient biefstuk = new Ingredient("Biefstuk");
         Ingredient champignons = new Ingredient("Champignons");
         Ingredient paprika2 = new Ingredient("Paprika");
@@ -155,7 +155,7 @@ public class HelloApplication {
         BiefstukMetGroenten.addIngredient(broccoli2);
         vlees.addGerecht(BiefstukMetGroenten);
 
-        Gerecht VegetarischePasta = new Gerecht("Vegetarische pasta", vegetarisch, 400);
+        GerechtT VegetarischePasta = new GerechtT("Vegetarische pasta", vegetarisch, 400);
         Ingredient pasta = new Ingredient("Pasta");
         Ingredient courgette = new Ingredient("Courgette");
         Ingredient tomaten2 = new Ingredient("Tomaten");
@@ -169,7 +169,7 @@ public class HelloApplication {
         VegetarischePasta.addIngredient(basilicum);
         vegetarisch.addGerecht(VegetarischePasta);
 
-        Gerecht VegetarischeBurger = new Gerecht("Vegetarische burger", vegetarisch, 200);
+        GerechtT VegetarischeBurger = new GerechtT("Vegetarische burger", vegetarisch, 200);
         Ingredient burgerBroodje = new Ingredient("Burgerbroodje");
         Ingredient groenteburger = new Ingredient("Groenteburger");
         Ingredient sla3 = new Ingredient("Sla");
@@ -183,7 +183,7 @@ public class HelloApplication {
         VegetarischeBurger.addIngredient(ketchup);
         vegetarisch.addGerecht(VegetarischeBurger);
 
-        Gerecht VegetarischeLasagne = new Gerecht("Vegetarische lasagne", vegetarisch, 600);
+        GerechtT VegetarischeLasagne = new GerechtT("Vegetarische lasagne", vegetarisch, 600);
         Ingredient lasagnebladen = new Ingredient("Lasagnebladen");
         Ingredient spinazie = new Ingredient("Spinazie");
         Ingredient ricotta = new Ingredient("Ricotta");
@@ -197,7 +197,7 @@ public class HelloApplication {
         VegetarischeLasagne.addIngredient(ParmezaanseKaas);
         vegetarisch.addGerecht(VegetarischeLasagne);
 
-        Gerecht VegetarischeNasiGoreng = new Gerecht("Vegetarische Nasi Goreng", vegetarisch, 600);
+        GerechtT VegetarischeNasiGoreng = new GerechtT("Vegetarische Nasi Goreng", vegetarisch, 600);
         Ingredient ei = new Ingredient("Ei");
         Ingredient ketjap = new Ingredient("Ketjap");
         VegetarischeNasiGoreng.addIngredient(rijst);
@@ -207,7 +207,7 @@ public class HelloApplication {
         VegetarischeNasiGoreng.addIngredient(ketjap);
         vegetarisch.addGerecht(VegetarischeNasiGoreng);
 
-        Gerecht VegetarischeSpinaziePasta = new Gerecht("Vegetarische SpinaziePasta", vegetarisch, 500);
+        GerechtT VegetarischeSpinaziePasta = new GerechtT("Vegetarische SpinaziePasta", vegetarisch, 500);
         Ingredient roomkaas = new Ingredient("Roomkaas");
         Ingredient pijnboompitten = new Ingredient("Pijnboompitten");
         VegetarischeSpinaziePasta.addIngredient(pasta);
@@ -268,7 +268,7 @@ public class HelloApplication {
                 weizigGewicht();
                 break;
             case GENEREER_SCHEMA:
-                schema();
+                optiesSchema();
                 break;
             case GENEREER_BOOSCHAPPENLIJST:
                 System.out.println("\n---Genereer boodschappen---");
@@ -305,16 +305,15 @@ public class HelloApplication {
         clearScreen();
         System.out.println("---Weizig client---\n");
         Scanner scanner = new Scanner(System.in);
-        int clientKeuze = kiesEenClient();
+        int clientKeuze = kiesEenClient(scanner);
         System.out.println(clients.get(clientKeuze).getNaam());
         System.out.println("Nieuw gewicht in kg:");
         clients.get(clientKeuze).setGewicht(scanner.nextDouble());
         Main();
     }
 
-    public int kiesEenClient() {
+    public int kiesEenClient(Scanner scanner) {
         System.out.println("Kies een client:");
-        Scanner scanner = new Scanner(System.in);
         for (int i = 0; i < clients.size(); i++) {
             System.out.println(i + 1 + ") " + clients.get(i).getNaam() + ", gewicht: " + clients.get(i).getGewicht() + "kg");
         }
@@ -322,45 +321,125 @@ public class HelloApplication {
         return clientKeuze;
     }
 
-    public void schema() {
-        clearScreen();
-        System.out.println("---Genereer schema---\n");
-        Scanner scanner = new Scanner(System.in);
-        int clientKeuze = kiesEenClient();
-        clearScreen();
-        System.out.println("Client: " + clients.get(clientKeuze).getNaam());
+    public int kiesEenDoel(Scanner scanner){
         System.out.println("\nKies een doel:");
         for (int i = 0; i < doelen.size(); i++) {
             System.out.println(i + 1 + ") " + doelen.get(i).getNaam());
         }
         int doelKeuze = scanner.nextInt() - 1;
-        clearScreen();
-        System.out.println("Client: " + clients.get(clientKeuze).getNaam());
-        System.out.println("Doel keuze:" + doelen.get(doelKeuze).getNaam());
+        return doelKeuze;
+    }
+
+    public int kiesEenDieet(Scanner scanner){
         System.out.println("\nKies een dieet: ");
         for (int i = 0; i < dieet.size(); i++) {
             System.out.println(i + 1 + ") " + dieet.get(i).getNaam());
         }
         int dieetKeuze = scanner.nextInt() - 1;
+        return dieetKeuze;
+    }
+    public int kiesDagenSporten(Scanner scanner){
+        System.out.println("\nHoeveel dagen sport je?");
+        return scanner.nextInt();
+    }
+    public boolean kiesShakes(Scanner scanner){
+        boolean keuze;
+        System.out.println("\nConsumeert u wel of geen proteïne shakes: wel/ niet");
+            String text = scanner.nextLine();
+            if (text == "wel"){
+                keuze = true;
+            }
+            else {
+                keuze = false;
+            }
+        return keuze;
+    }
+
+    public int berekenMaaltijden(int client, int doel, int dagenTrainen, boolean shakes){
+        int calorieënShakes = 400;
+        int aantalMaaltijden;
+        int gemiddeldeCalMaaltijd = 550;
+        double percentageExtraCaloriën;
+
+        if (dagenTrainen <= 3){
+            percentageExtraCaloriën = 1.0;
+        } else {
+            percentageExtraCaloriën = 1.25;
+        }
+
+        int calorieBehoefteDoel = (int) Math.round(clients.get(client).getCalorieBehoefte() * doelen.get(doel).getPercentage() * percentageExtraCaloriën);
+
+        if (shakes){
+            aantalMaaltijden = (calorieBehoefteDoel - calorieënShakes) / gemiddeldeCalMaaltijd;
+        } else{
+            aantalMaaltijden = calorieBehoefteDoel / gemiddeldeCalMaaltijd;
+        }
+        return aantalMaaltijden;
+    }
+
+    public int vindCalorieBehoefte(String naam){
+        for (Client client : clients) {
+            if (client.getNaam().equals(naam)) {
+                return client.getCalorieBehoefte();
+            }
+        }
+        return 0;
+    }
+    public double vindPercentageDoel(String naamDoel){
+        for (Doel doel : doelen) {
+            if (doel.getNaam().equals(naamDoel)) {
+                return doel.getPercentage();
+            }
+        }
+        return 0.0;
+    }
+
+    public void optiesSchema() {
         clearScreen();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("---Genereer schema---\n");
+
+        int clientKeuze = kiesEenClient(scanner);
+        clearScreen();
+
+        System.out.println("Client: " + clients.get(clientKeuze).getNaam());
+
+        int doelKeuze = kiesEenDoel(scanner);
+        clearScreen();
+
+        System.out.println("Client: " + clients.get(clientKeuze).getNaam());
+        System.out.println("Doel keuze:" + doelen.get(doelKeuze).getNaam());
+
+        int dieetKeuze = kiesEenDieet(scanner);
+        clearScreen();
+
         System.out.println("Client: " + clients.get(clientKeuze).getNaam());
         System.out.println("Doel keuze: " + doelen.get(doelKeuze).getNaam());
         System.out.println("Dieet keuze: " + dieet.get(dieetKeuze).getNaam());
-        int calorieBehoefteDoel;
-        calorieBehoefteDoel = (int) Math.round(clients.get(clientKeuze).getCalorieBehoefte() * doelen.get(doelKeuze).getPercentage());
+
+        int dagenSporten = kiesDagenSporten(scanner);
+        clearScreen();
+
+        boolean shakesKeuze = kiesShakes(scanner);
+        clearScreen();
+
+        berekenMaaltijden(clientKeuze, doelKeuze, dagenSporten, shakesKeuze);
+
+        int calorieBehoefteDoel = (int) Math.round(clients.get(clientKeuze).getCalorieBehoefte() * doelen.get(doelKeuze).getPercentage());
         System.out.println("calorieBehoefteDoel: " + calorieBehoefteDoel);
         System.out.println();
         genereerSchema(dieet.get(dieetKeuze));
 
     }
+
     public void genereerSchema(Dieet dieet) {
         System.out.println("Gerechten voor " + dieet.getNaam() + " dieet:");
 
-        for (Gerecht gerecht : dieet.getGerechten()) {
+        for (GerechtT gerecht : dieet.getGerechten()) {
             System.out.println("- " + gerecht.getNaam());
         }
     }
-//
+
 //    public void genereerBoodschappenlijstje(Dieet dieet) {
 //        StringBuilder sb = new StringBuilder();
 //        for (Gerecht gerecht : dieet.getGerechten()) {
@@ -371,27 +450,6 @@ public class HelloApplication {
 //        System.out.println(sb);
 //    }
 }
-
-        abstract class Dieet {
-            private String naam;
-            ArrayList<Gerecht> gerechten = new ArrayList<>();
-
-            public Dieet(String naam) {
-                this.naam = naam;
-            }
-
-            public String getNaam() {
-                return naam;
-            }
-
-            public void addGerecht(Gerecht gerecht) {
-                gerechten.add(gerecht);
-            }
-
-            public ArrayList<Gerecht> getGerechten() {
-                return gerechten;
-            }
-        }
 
 
 
